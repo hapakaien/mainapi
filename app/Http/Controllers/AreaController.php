@@ -35,7 +35,7 @@ class AreaController extends Controller
                 $request->merge(['island' => [$request->island]]);
             }
             $query->whereIn('code', $request->island);
-        })->with(['provinces.regencies'])->get();
+        })->with(['provinces.regencies.licensePlates'])->get();
         return new IslandCollection($data);
     }
 
@@ -59,7 +59,7 @@ class AreaController extends Controller
                 $request->merge(['province' => [$request->province]]);
             }
             $query->whereIn('code', $request->province);
-        })->with(['regencies'])->get();
+        })->with(['regencies.licensePlates'])->get();
         return new ProvinceCollection($data);
     }
 
@@ -71,7 +71,7 @@ class AreaController extends Controller
      */
     public function regency(Request $request)
     {
-        $data = Regency::when($request->filled('island'), function ($query) use ($request) {
+        $data = Regency::with(['licensePlates'])->when($request->filled('island'), function ($query) use ($request) {
             if ( ! is_array($request->island)) {
                 $request->merge(['island' => [$request->island]]);
             }

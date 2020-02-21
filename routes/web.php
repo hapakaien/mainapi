@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 $router->post('island', ['uses' => 'AreaController@island', 'as' => 'island']);
 $router->post('province', ['uses' => 'AreaController@province', 'as' => 'province']);
 $router->post('regency', ['uses' => 'AreaController@regency', 'as' => 'regency']);
+$router->post('license_plate', ['uses' => 'MainController@licensePlate', 'as' => 'license_plate']);
