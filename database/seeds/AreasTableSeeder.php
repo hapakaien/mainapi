@@ -1523,6 +1523,7 @@ class AreasTableSeeder extends Seeder
 		        					'name' => 'Kabupaten Sabu Raijua',
 									'code' => '53.20',
 		        					'abbreviation' => 'SBB',
+									'license_plate' => 'DH',
 	        					],
 								[
 		        					'name' => 'Kabupaten Sikka',
@@ -3382,7 +3383,7 @@ class AreasTableSeeder extends Seeder
 		        					'name' => 'Kota Tebing Tinggi',
 									'code' => '12.76',
 									'abbreviation' => 'TBT',
-									'license_plate' => 'BK',
+									'license_plate' => 'BK'
 	        					],
 	        				],
 	        			],
