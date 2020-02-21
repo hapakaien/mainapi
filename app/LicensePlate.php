@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Datakrama\Eloquid\Traits\Uuids;
 
-class Island extends Model
+class LicensePlate extends Model
 {
     use Uuids;
 
@@ -26,18 +26,18 @@ class Island extends Model
     ];
 
     /**
-     * Get the province for the island.
+     * Get the regency license plate for the license plate.
      */
-    public function provinces()
+    public function regencyLicensePlates()
     {
-        return $this->hasMany('App\Province');
+        return $this->hasMany('App\RegencyLicensePlate');
     }
 
     /**
-     * Get all of the posts for the country.
+     * The regency that belong to the license plate.
      */
     public function regencies()
     {
-        return $this->hasManyThrough('App\Regency', 'App\Province');
+        return $this->belongsToMany('App\Regency', 'regency_license_plates')->using('App\RegencyLicensePlate');
     }
 }

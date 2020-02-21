@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Znck\Eloquent\Traits\BelongsToThrough;
-use App\Traits\Uuids;
+use Datakrama\Eloquid\Traits\Uuids;
 
 class Regency extends Model
 {
@@ -40,5 +40,21 @@ class Regency extends Model
     public function island()
     {
         return $this->belongsToThrough('App\Island', 'App\Province');
+    }
+
+    /**
+     * Get the regency license plate for the regency.
+     */
+    public function regencyLicensePlates()
+    {
+        return $this->hasMany('App\RegencyLicensePlate');
+    }
+    
+    /**
+     * The license plate that belong to the regency.
+     */
+    public function licensePlates()
+    {
+        return $this->belongsToMany('App\LicensePlate', 'regency_license_plates')->using('App\RegencyLicensePlate');
     }
 }
