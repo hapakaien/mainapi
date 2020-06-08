@@ -19,9 +19,4 @@ Dokumentasi dapat ditemukan di [MainAPI website](https://main.husenis.me).
 Jika Anda menemukan kerentanan keamanan dalam MainAPI, silakan kirim email ke husenisme@gmail.com. Semua kerentanan keamanan akan segera ditangani.
 
 ## Credits
-- [Lumen](https://github.com/laravel/lumen)
-- [Lumen Generator](https://github.com/flipboxstudio/lumen-generator)
-- [ramsey/uuid](https://github.com/ramsey/uuid)
-- [Eloquid](https://github.com/datakrama/eloquid)
-- [Doctrine DBAL](https://github.com/doctrine/dbal)
-- [Laravel Eloquent BelongsToThrough](https://github.com/staudenmeir/belongs-to-through)
+- [Ahmad Husen](https://github.com/husenisme)
