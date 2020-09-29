@@ -12,7 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return 'Welcome to Mainapi';
+    return 'Selamat datang di Mainapi';
 });
 
 $router->post('island', ['uses' => 'AreaController@island', 'as' => 'island']);
